@@ -2,14 +2,9 @@
 
 using namespace std;
 
-void troca(int &v1, int &v2){
-	int aux = v1;
-	v1 = v2;
-	v2 = aux;
-}
-
-void troca(float &v1, float &v2){
-	float aux = v1;
+template<typename T>
+void troca(T &v1, T &v2){
+	T aux = v1;
 	v1 = v2;
 	v2 = aux;
 }
@@ -24,4 +19,7 @@ int main()
 	troca(x, y);
 	cout << x << ' ' << y << endl;
 
+	char c1='@', c2='*';
+	troca(c1, c2);
+    cout << c1 << ' ' << c2 << endl;
 }
