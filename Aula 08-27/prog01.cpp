@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -25,15 +26,26 @@ public:
   int y() const { return y_; }
 
   void y(int py) { y_ = py; }
+
+  // Retorna a distância cartesiana entre os pontos
+  double distance_to(const point2D &other) const{
+    auto dx = x_ - other.x_;
+    auto dy = y_ - other.y_;
+    return std::sqrt(dx*dx + dy*dy);
+  }
 };
 
+
+
 int main() {
-  point2D p;
-  cout << p.x() << ":" << p.y() << endl;
-  p.x(10);
-  p.y(2);
-  cout << p.x() << ":" << p.y() << endl;
+  point2D pa;
+  cout << pa.x() << ":" << pa.y() << endl;
+  pa.x(10);
+  pa.y(2);
+  cout << pa.x() << ":" << pa.y() << endl;
 
   point2D pb(55, 200);
   cout << pb.x() << ":" << pb.y() << endl;
+
+  cout << "Distância: " << pa.distance_to(pb) << endl;
 }
