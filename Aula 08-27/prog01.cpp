@@ -36,7 +36,6 @@ public:
 };
 
 
-
 int main() {
   point2D pa;
   cout << pa.x() << ":" << pa.y() << endl;
