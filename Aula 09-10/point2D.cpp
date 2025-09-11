@@ -20,9 +20,9 @@ std::ostream& operator<<(std::ostream& lhs, const point2D& rhs){
 }
 
 point2D operator+(const point2D& lhs, const point2D& rhs){
-    // TODO
+    return point2D(lhs.x()+rhs.x(), lhs.y()+rhs.y());
 }
 
-point2D operator*(const point2D& lhs, int rhs){
-    // TODO
+point2D operator*(const point2D& lhs, int scale){
+    return point2D(lhs.x()*scale, lhs.y()*scale);
 }
