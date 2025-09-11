@@ -23,3 +23,5 @@ public:
 std::ostream& operator<<(std::ostream& lhs, const point3D& rhs);
 
 // TODO: Sobrecarregar os operadores== e != (DRY!)
+bool operator==(const point3D& lhs, const point3D& rhs);
+bool operator!=(const point3D& lhs, const point3D& rhs);

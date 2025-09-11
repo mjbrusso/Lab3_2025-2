@@ -17,3 +17,13 @@ std::ostream &operator<<(std::ostream &lhs, const point3D &rhs) {
              << rhs.z() 
              << ")";
 }
+
+bool operator==(const point3D& lhs, const point3D& rhs)
+{
+     return point2D(lhs)==point2D(rhs) && lhs.z()==rhs.z();
+}
+
+bool operator!=(const point3D& lhs, const point3D& rhs)
+{
+    return !(lhs==rhs);
+}
