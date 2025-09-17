@@ -3,9 +3,7 @@
 #include "pet.hpp"
 #include <iostream>
 
-using namespace lab3;
-
 int main() {
-    pet max("Max");
+    lab3::pet max("Max");
     max.speak();
 }
