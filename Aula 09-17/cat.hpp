@@ -1,0 +1,13 @@
+#pragma once
+
+#include "pet.hpp"
+
+namespace lab3 {
+class cat : public pet {
+public:
+  cat(const std::string &name) : pet(name) {}
+
+  void speak() const;
+};
+} // namespace lab3
+

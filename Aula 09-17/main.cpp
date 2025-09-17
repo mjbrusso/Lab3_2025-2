@@ -1,7 +1,11 @@
-#include <iostream>
+#include "cat.hpp"
+#include "dog.hpp"
 #include "pet.hpp"
+#include <iostream>
 
-int main(){
-    pet mypet("Snowball I");
-    mypet.speak();
+using namespace lab3;
+
+int main() {
+    pet max("Max");
+    max.speak();
 }

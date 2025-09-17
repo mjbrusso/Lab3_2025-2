@@ -1,22 +1,22 @@
 #pragma once
+
+#include <iostream>
 #include <string>
 
+namespace lab3 {
 class pet {
 protected:
-    std::string name_;
+  std::string name_;
 
 public:
-    // constructor
-    pet(const std::string& name)
-        : name_ { name }
-    {
-    }
+  // constructor
+  pet(const std::string &name) : name_{name} {
+  }
 
-    // Setter
-    void name(const std::string& name) { name_ = name; }
-    // Getter
-    std::string name() const { return name_; }
+  // Accessors
+  void set_name(const std::string &name) { name_ = name; }
+  std::string name() const { return name_; }
 
-    // Other public methods
-    void speak() const;
+  void speak() const;
 };
+} // namespace lab3
