@@ -11,12 +11,18 @@ protected:
 public:
   // constructor
   pet(const std::string &name) : name_{name} {
+    std::cout << name_ << " was born!\n";
+  }
+
+  // destrutor
+  virtual ~pet(){
+    std::cout << name_ << " died! :-( \n";
   }
 
   // Accessors
-  void set_name(const std::string &name) { name_ = name; }
+  void name(const std::string &name) { name_ = name; }
   std::string name() const { return name_; }
 
-  void speak() const;
+  virtual void speak() const = 0; // virtual pura
 };
 } // namespace lab3
