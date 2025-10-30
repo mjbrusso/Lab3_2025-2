@@ -1,10 +1,5 @@
 #include "compoundinterestcalculator.h"
 
-CompoundInterestCalculator::CompoundInterestCalculator()
-{
-
-}
-
 int CompoundInterestCalculator::months() const
 {
     return months_;

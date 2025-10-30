@@ -8,7 +8,9 @@ class CompoundInterestCalculator
     using row = std::tuple<int, double, double>;
     using rows = std::vector<row>;
 public:
-    CompoundInterestCalculator();
+    CompoundInterestCalculator() : months_{1}, amount_{0}, rate_{0}
+    {
+    }
 
     int months() const;
     void setMonths(int newMonths);

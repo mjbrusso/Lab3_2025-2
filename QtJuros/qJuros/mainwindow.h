@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLocale>
+#include "compoundinterestcalculator.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +17,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_amountDoubleSpinBox_valueChanged(double arg1);
+
+    void on_rateDoubleSpinBox_valueChanged(double arg1);
+
+    void on_monthsSpinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
+    CompoundInterestCalculator calc_;
+    QLocale locale_;
+
+    void updateTable();
 };
 #endif // MAINWINDOW_H

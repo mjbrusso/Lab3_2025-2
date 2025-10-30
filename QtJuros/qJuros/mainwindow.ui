@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>351</width>
-    <height>371</height>
+    <height>420</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -81,26 +81,47 @@
     </item>
     <item>
      <widget class="QTableWidget" name="resultTableWidget">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
       <column>
        <property name="text">
         <string>Mês</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
        </property>
       </column>
       <column>
        <property name="text">
         <string>Juros</string>
        </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Valor Atualizado</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignCenter</set>
        </property>
       </column>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -109,8 +130,70 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>&amp;Arquivo</string>
+    </property>
+    <addaction name="actionExportar"/>
+    <addaction name="separator"/>
+    <addaction name="action_Sair"/>
+   </widget>
+   <widget class="QMenu" name="menuA_juda">
+    <property name="title">
+     <string>A&amp;juda</string>
+    </property>
+    <addaction name="action_Sobre"/>
+   </widget>
+   <addaction name="menuArquivo"/>
+   <addaction name="menuA_juda"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionExportar"/>
+   <addaction name="action_Sobre"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExportar">
+   <property name="icon">
+    <iconset theme="x-office-spreadsheet"/>
+   </property>
+   <property name="text">
+    <string>E&amp;xportar</string>
+   </property>
+   <property name="toolTip">
+    <string>Exportar para CSV</string>
+   </property>
+   <property name="statusTip">
+    <string>Exportar os dados calculados em CSV</string>
+   </property>
+  </action>
+  <action name="action_Sair">
+   <property name="icon">
+    <iconset theme="application-exit"/>
+   </property>
+   <property name="text">
+    <string>&amp;Sair</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_Sobre">
+   <property name="icon">
+    <iconset theme="help-about"/>
+   </property>
+   <property name="text">
+    <string>&amp;Sobre</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
