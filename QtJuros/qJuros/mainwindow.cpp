@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "compoundinterestcalculator.h"
+#include "aboutdialog.h"
+#include <QThread>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -53,6 +55,26 @@ void MainWindow::on_monthsSpinBox_valueChanged(int arg1)
     calc_.setMonths(arg1);
     updateTable();
 }
+
+void MainWindow::on_action_Sobre_triggered()
+{
+//    AboutDialog about(this);
+//    about.exec();
+// Ou:
+    AboutDialog* about = new AboutDialog(this);
+    about->setAttribute(Qt::WA_DeleteOnClose);
+    about->show();
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

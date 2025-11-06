@@ -24,6 +24,8 @@ private slots:
 
     void on_monthsSpinBox_valueChanged(int arg1);
 
+    void on_action_Sobre_triggered();
+
 private:
     Ui::MainWindow *ui;
     CompoundInterestCalculator calc_;

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>351</width>
+    <width>347</width>
     <height>420</height>
    </rect>
   </property>
@@ -88,7 +88,7 @@
        <enum>QAbstractItemView::SelectRows</enum>
       </property>
       <attribute name="horizontalHeaderVisible">
-       <bool>true</bool>
+       <bool>false</bool>
       </attribute>
       <attribute name="verticalHeaderVisible">
        <bool>false</bool>
@@ -126,7 +126,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>351</width>
+     <width>347</width>
      <height>22</height>
     </rect>
    </property>
@@ -163,7 +163,8 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionExportar">
    <property name="icon">
-    <iconset theme="x-office-spreadsheet"/>
+    <iconset theme="x-office-spreadsheet">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>E&amp;xportar</string>
@@ -177,7 +178,8 @@
   </action>
   <action name="action_Sair">
    <property name="icon">
-    <iconset theme="application-exit"/>
+    <iconset theme="application-exit">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Sair</string>
@@ -188,7 +190,8 @@
   </action>
   <action name="action_Sobre">
    <property name="icon">
-    <iconset theme="help-about"/>
+    <iconset theme="help-about">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>&amp;Sobre</string>
@@ -196,5 +199,22 @@
   </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>action_Sair</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
