@@ -26,6 +26,8 @@ private slots:
 
     void on_action_Sobre_triggered();
 
+    void on_actionExportar_triggered();
+
 private:
     Ui::MainWindow *ui;
     CompoundInterestCalculator calc_;

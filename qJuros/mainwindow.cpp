@@ -3,6 +3,8 @@
 #include "compoundinterestcalculator.h"
 #include "aboutdialog.h"
 #include <QThread>
+#include <QFileDialog>
+#include "csvexporter.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -67,15 +69,14 @@ void MainWindow::on_action_Sobre_triggered()
 }
 
 
-
-
-
-
-
-
-
-
-
+void MainWindow::on_actionExportar_triggered()
+{
+    auto filename = QFileDialog::getSaveFileName();
+    if(!filename.isEmpty()){
+        CSVExporter csv(filename.toStdString());
+        csv.save(calc_.calculate());
+    }
+}
 
 
 

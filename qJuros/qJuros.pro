@@ -12,12 +12,14 @@ CONFIG += c++11
 SOURCES += \
     aboutdialog.cpp \
     compoundinterestcalculator.cpp \
+    csvexporter.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     aboutdialog.h \
     compoundinterestcalculator.h \
+    csvexporter.h \
     mainwindow.h
 
 FORMS += \

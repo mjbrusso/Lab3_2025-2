@@ -5,9 +5,10 @@
 
 class CompoundInterestCalculator
 {
+public:
     using row = std::tuple<int, double, double>;
     using rows = std::vector<row>;
-public:
+
     CompoundInterestCalculator() : months_{1}, amount_{0}, rate_{0}
     {
     }
